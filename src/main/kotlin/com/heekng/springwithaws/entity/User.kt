@@ -9,7 +9,14 @@ class User(
     @GeneratedValue(strategy = IDENTITY)
     @Column(name = "user_id")
     val id: Long? = null,
-    val name: String,
-    val phone: String,
+    var name: String,
+    var phone: String,
 ) {
+    fun update(
+        name: String? = null,
+        phone: String? = null,
+    ) {
+        name?.let { this.name = name }
+        phone?.let { this.phone = phone }
+    }
 }
