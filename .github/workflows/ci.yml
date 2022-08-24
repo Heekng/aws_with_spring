@@ -51,4 +51,5 @@ jobs:
       - name: upload to s3
         run: |
           pwd
-          aws s3 cp --region ap-northeast-2 --acl private --local_dir deploy s3://heekng-service-build/
+          ls
+          aws s3 cp --region ap-northeast-2 --acl private deploy s3://heekng-service-build/
