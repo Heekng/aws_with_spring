@@ -42,8 +42,11 @@ jobs:
         shell: bash
 
       - name: deploy
+        uses: aws-actions/configure-aws-credentials@v1
         env:
           AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
           AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
-        run: |
-          aws s3 cp --recursive --region ap-northeast-2 dist s3://heekng-service-build
+          aws-region: ap-northeast-2
+
+      - name: upload to s3
+        run: aws s3 cp --region ap-northeast-2 --acl private ./deploy s3://heekng-service-build/
