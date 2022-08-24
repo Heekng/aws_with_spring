@@ -26,6 +26,7 @@ dependencies {
 	runtimeOnly("org.mariadb.jdbc:mariadb-java-client")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+	implementation("org.modelmapper:modelmapper:3.1.0")
 }
 
 allOpen {
