@@ -33,3 +33,20 @@ jobs:
       - name: build
         run: ./gradlew clean build
         shell: bash
+
+      - name: before deploy
+        run: |
+          zip -r aws_with_spring *
+          mkdir -p deploy
+          mv aws_with_spring.zip deploy/aws_with_spring.zip
+        shell: bash
+
+      - name: deploy
+        env:
+          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
+        run: |
+          aws s3 cp \
+          --recursive \
+          --region ap-northeast-2
+          dis s3://heekng-service-build
