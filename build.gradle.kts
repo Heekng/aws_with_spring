@@ -1,4 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.util.Date
 
 plugins {
 	id("org.springframework.boot") version "2.6.8"
@@ -8,8 +11,10 @@ plugins {
 	kotlin("plugin.jpa") version "1.6.21"
 }
 
+val dateTimeFormat = DateTimeFormatter.ofPattern("yyyyMMddHHmmss")
+
 group = "com.heekng"
-version = "0.0.1-SNAPSHOT"
+version = "0.0.1-SNAPSHOT-" + LocalDateTime.now().format(dateTimeFormat)
 java.sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
