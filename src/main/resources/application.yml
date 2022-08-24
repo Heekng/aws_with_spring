@@ -1,17 +1,5 @@
 spring:
-  datasource:
-    url: 'jdbc:h2:mem:springwithaws'
-    username: 'user'
-    password: ''
-    driver-class-name: 'org.h2.Driver'
-  jpa:
-    hibernate:
-      ddl-auto: create
-    properties:
-      hibernate:
-        format_sql: true
-        show_sql: true
-  h2:
-    console:
-      enabled: true
-      path: '/h2-console'
+  profiles:
+    group:
+      "local": "local"
+      "real": "real,real-db"

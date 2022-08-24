@@ -1,10 +1,10 @@
-package com.heekng.springwithaws.controller
+package com.heekng.aws_with_spring.controller
 
-import com.heekng.springwithaws.dto.UserCreateRequestDto
-import com.heekng.springwithaws.dto.UserPatchRequestDto
-import com.heekng.springwithaws.entity.User
-import com.heekng.springwithaws.repository.UserRepository
-import com.heekng.springwithaws.service.UserService
+import com.heekng.aws_with_spring.dto.UserCreateRequestDto
+import com.heekng.aws_with_spring.dto.UserPatchRequestDto
+import com.heekng.aws_with_spring.entity.User
+import com.heekng.aws_with_spring.repository.UserRepository
+import com.heekng.aws_with_spring.service.UserService
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.ModelAttribute

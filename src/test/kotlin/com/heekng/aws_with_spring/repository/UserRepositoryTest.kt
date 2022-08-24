@@ -1,9 +1,7 @@
-package com.heekng.springwithaws.repository
+package com.heekng.aws_with_spring.repository
 
-import com.heekng.springwithaws.entity.User
-import org.assertj.core.api.Assertions
+import com.heekng.aws_with_spring.entity.User
 import org.assertj.core.api.Assertions.*
-import org.hibernate.Hibernate
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired

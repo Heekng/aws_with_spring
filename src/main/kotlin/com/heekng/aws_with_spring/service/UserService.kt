@@ -1,8 +1,8 @@
-package com.heekng.springwithaws.service
+package com.heekng.aws_with_spring.service
 
-import com.heekng.springwithaws.dto.UserCreateRequestDto
-import com.heekng.springwithaws.dto.UserPatchRequestDto
-import com.heekng.springwithaws.repository.UserRepository
+import com.heekng.aws_with_spring.dto.UserCreateRequestDto
+import com.heekng.aws_with_spring.dto.UserPatchRequestDto
+import com.heekng.aws_with_spring.repository.UserRepository
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional

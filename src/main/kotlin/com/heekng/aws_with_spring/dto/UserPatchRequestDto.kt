@@ -1,6 +1,4 @@
-package com.heekng.springwithaws.dto
-
-import com.heekng.springwithaws.entity.User
+package com.heekng.aws_with_spring.dto
 
 data class UserPatchRequestDto(
     val name: String? = null,

@@ -1,9 +1,11 @@
 spring:
-  profiles:
-    include: real-db
+  config:
+    activate:
+      on-profile: real
   jpa:
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        dialect: org.hibernate.dialect.MySQL57Dialect
+        storage_engine: innodb
   session:
     store-type: jdbc

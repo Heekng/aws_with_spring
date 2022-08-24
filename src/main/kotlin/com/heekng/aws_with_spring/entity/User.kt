@@ -1,4 +1,4 @@
-package com.heekng.springwithaws.entity
+package com.heekng.aws_with_spring.entity
 
 import javax.persistence.*
 import javax.persistence.GenerationType.*

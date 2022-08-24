@@ -1,6 +1,6 @@
-package com.heekng.springwithaws.dto
+package com.heekng.aws_with_spring.dto
 
-import com.heekng.springwithaws.entity.User
+import com.heekng.aws_with_spring.entity.User
 
 data class UserCreateRequestDto(
     val name: String,

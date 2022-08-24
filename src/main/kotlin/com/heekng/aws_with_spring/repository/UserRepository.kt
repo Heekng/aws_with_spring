@@ -1,6 +1,6 @@
-package com.heekng.springwithaws.repository
+package com.heekng.aws_with_spring.repository
 
-import com.heekng.springwithaws.entity.User
+import com.heekng.aws_with_spring.entity.User
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface UserRepository : JpaRepository<User, Long> {

@@ -1,4 +1,4 @@
-package com.heekng.springwithaws.config
+package com.heekng.aws_with_spring.config
 
 import org.modelmapper.ModelMapper
 import org.springframework.context.annotation.Bean
