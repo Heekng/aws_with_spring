@@ -48,8 +48,14 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
           aws-region: ap-northeast-2
 
+      - name: Copy appspec
+        run: cp appspec.yml ./deploy
+
       - name: upload to s3
         run: |
           pwd
           ls
           aws s3 cp --region ap-northeast-2 --acl private ./deploy/* s3://heekng-service-build/
+
+      - name: CodeDeploy
+        run: aws deploy create-deployment --application-name heekng-service --deployment-group-name heekng-service --s3-location bucket=heekng-service-build,key=aws_with_spring.zip,bundleType=zip
