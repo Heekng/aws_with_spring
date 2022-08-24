@@ -49,4 +49,4 @@ jobs:
           aws s3 cp \
           --recursive \
           --region ap-northeast-2
-          dis s3://heekng-service-build
+          dist s3://heekng-service-build
