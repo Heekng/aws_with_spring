@@ -55,8 +55,6 @@ jobs:
 
       - name: upload to s3
         run: |
-          pwd
-          ls
           aws s3 cp --region ap-northeast-2 --acl private --recursive ./deploy s3://heekng-service-build/
 
       - name: CodeDeploy
